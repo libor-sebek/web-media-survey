@@ -1,0 +1,5 @@
+database:
+	default:
+		dsn: 'mysql:host=localhost;dbname=web_media_survey'
+		user: root
+		password:

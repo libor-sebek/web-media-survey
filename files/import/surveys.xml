@@ -1,0 +1,26 @@
+<surveys>
+	<survey>
+		<question>Přijmout Libora Šebka? :-)</question>
+		<choices>
+			<choice>ANO</choice>
+			<choice>ne</choice>
+			<choice>nevím</choice>
+		</choices>
+	</survey>
+	<survey>
+		<question>Otázka 1</question>
+		<choices>
+			<choice>možnost A</choice>
+			<choice>možnost B</choice>
+			<choice>možnost C</choice>
+		</choices>
+	</survey>
+	<survey>
+		<question>Otázka 2</question>
+		<choices>
+			<choice>možnost E</choice>
+			<choice>možnost F</choice>
+			<choice>možnost G</choice>
+		</choices>
+	</survey>
+</surveys>

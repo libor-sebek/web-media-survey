@@ -31,6 +31,7 @@ class SurveyPresenter extends Nette\Application\UI\Presenter
 		$this->template->surveys = $this->surveyRepository->getAll();
 		$request = $this->getHttpRequest();
 		$user = $this->userRepository->getUser($request->getRemoteAddress() ,$request->getHeader('user-agent'));
+
 		$this->template->doneSurveyIds = [];
 		if($user)
 		{
@@ -60,15 +61,15 @@ class SurveyPresenter extends Nette\Application\UI\Presenter
 		$ip = $request->getRemoteAddress();
 		$userAgent = $request->getHeader('user-agent');
 		$user = $this->userRepository->getUser($ip, $userAgent);
+		if(!$user)
+		{
+			$user = $this->userRepository->createUser($ip, $userAgent);
+		}
 
 		if($user && $this->surveyRepository->isUserVoteInSurvey($user->id, $surveyId))
 		{
 			$this->flashMessage('V anketě jste již hlasoval', 'error');
 			return;
-		}
-		else
-		{
-			$user = $this->userRepository->createUser($ip, $userAgent);
 		}
 
 		try

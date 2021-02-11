@@ -1,5 +1,5 @@
 SQL pro vytvoření databáze je v souboru 
-- /file/db/db_dump.sql
+- /files/db/db_dump.sql
 
 Pro běh aplikace se musí založit adresáře
 - /temp
@@ -7,4 +7,16 @@ Pro běh aplikace se musí založit adresáře
 
 Nainstalovat vendory
 - composer install
+
+XML pro importu je v souboru
+- /files/import/surveys.xml
+
+Import se spouští na adrese
+- /survey/import
+
+Akety pak budou dostupné na adresách
+- /
+  
+nebo
+- /survey
 

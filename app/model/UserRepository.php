@@ -26,4 +26,12 @@ class UserRepository
 		return $user;
 	}
 
+	public function createUser($ip, $userAgent):Nette\Database\Table\ActiveRow
+	{
+		return $this->db->table('user')->insert([
+			'ip' => $ip,
+			'hash' => md5($userAgent),
+			'other' => $userAgent,
+		]);
+	}
 }
